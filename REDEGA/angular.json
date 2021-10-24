@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "REDEGA:build:production",
+            "firebaseProject": "redega-9c018",
+            "firebaseHostingSite": "redega-9c018"
+          }
         }
       }
     }

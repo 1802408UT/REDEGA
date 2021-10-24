@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "redega-9c018": {
+      "hosting": {
+        "REDEGA": [
+          "redega-9c018"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "redega-9c018"
+  }
+}
