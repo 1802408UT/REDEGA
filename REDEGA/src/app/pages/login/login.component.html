@@ -1,1 +1,12 @@
-<p>login works!</p>
+<mat-card>
+    <mat-card-content>
+        <h1>LOGIN</h1>
+        <div class="exampleq-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+    </mat-card-content>
+</mat-card>
