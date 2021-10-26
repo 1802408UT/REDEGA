@@ -8,6 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent{
   email = new FormControl('', [Validators.required, Validators.email]);
+  hide = true;
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
