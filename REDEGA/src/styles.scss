@@ -23,11 +23,26 @@ $REDEGA-theme: mat.define-light-theme(( color: ( primary: $REDEGA-primary, accen
 
 /* You can add global styles to this file, and also import other style files */
 
-html,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
 body {
     margin: 0;
-    font-family: 'Oswald', sans-serif;
-    background: white;
+}
+
+.main {
+    padding-top: 4em;
+    /**PADDING para separar el MAIN del footer 55px+el doble(110px) = 165px*/
+    padding-bottom: 165px;
 }
 
 .headerc {
@@ -42,10 +57,108 @@ body {
     color: #ededed;
 }
 
-footer {
-    background-color: black;
-    bottom: -1px;
-    width: 100%;
-    height: 50px;
-    color: white;
+.icon {
+    height: 2em;
+    width: 2em;
+    background-color: #959595;
+    color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    flex: 0 0 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+footer {
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    /* text-align: center; */
+}
+
+
+/*
+.mat-badge-content {
+    font-weight: 600;
+    font-size: 12px;
+    font-family: Roboto, Helvetica Neue, sans-serif
+}
+
+.mat-badge-small .mat-badge-content {
+    font-size: 9px
+}
+
+.mat-badge-large .mat-badge-content {
+    font-size: 24px
+}
+
+.mat-h1,
+.mat-headline,
+.mat-typography h1 {
+    font: 400 24px/32px Roboto, Helvetica Neue, sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px
+}
+
+.mat-h2,
+.mat-title,
+.mat-typography h2 {
+    font: 500 20px/32px Roboto, Helvetica Neue, sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px
+}
+
+.mat-h3,
+.mat-subheading-2,
+.mat-typography h3 {
+    font: 400 16px/28px Roboto, Helvetica Neue, sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px
+}
+
+.mat-h4,
+.mat-subheading-1,
+.mat-typography h4 {
+    font: 400 15px/24px Roboto, Helvetica Neue, sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px
+}
+
+.mat-h5,
+.mat-typography h5 {
+    font: 400 calc(14px * .83) /20px Roboto, Helvetica Neue, sans-serif;
+    margin: 0 0 12px
+}
+
+.mat-h6,
+.mat-typography h6 {
+    font: 400 calc(14px * .67) /20px Roboto, Helvetica Neue, sans-serif;
+    margin: 0 0 12px
+}
+
+.mat-body-2,
+.mat-body-strong {
+    font: 500 14px/24px Roboto, Helvetica Neue, sans-serif;
+    letter-spacing: normal
+}
+
+.mat-body,
+.mat-body-1,
+.mat-typography {
+    font: 400 14px/20px Roboto, Helvetica Neue, sans-serif;
+    letter-spacing: normal
+}
+
+.mat-body-1 p,
+.mat-body p,
+.mat-typography p {
+    margin: 0 0 12px
+}
+
+*/
