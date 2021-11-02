@@ -1,25 +1,24 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '~@angular/material' as mat;
-// Plus imports for other components in your app.
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$REDEGA-primary: mat.define-palette(mat.$purple-palette, 900);
-$REDEGA-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-// The warn palette is optional (defaults to red).
-$REDEGA-warn: mat.define-palette(mat.$red-palette);
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$REDEGA-theme: mat.define-light-theme(( color: ( primary: $REDEGA-primary, accent: $REDEGA-accent, warn: $REDEGA-warn, )));
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($REDEGA-theme);
+@import '~@angular/material/theming';
+@include mat-core();
+// GAMA DE COLORES
+$my-primary-color: ( 200: #3c3c3c, 500: #000000, 700: #171717, contrast: ( 200: #000000, 500: #ffffff, 700: #ffffff, ));
+$my-accent-color: ( 200: #6f6f6f, 500: #1d1d1d, 700: #444444, contrast: ( 200: #000000, 500: #ffffff, 700: #ffffff, ));
+$my-warn-color: ( 200: #ff5131, 500: #9c0000, 700: #d60000, contrast: ( 200: #000000, 500: #000000, 700: #000000, ));
+// PALETA DE COLORES
+$my-palette-primary: mat-palette($my-primary-color);
+$my-palette-accent: mat-palette($my-accent-color);
+$my-palette-warn: mat-palette($my-warn-color);
+// TEMA PROPIO
+$my-theme: mat-light-theme(( color: ( primary: $my-palette-primary, accent: $my-palette-accent, warn: $my-palette-warn)));
+// APLICAR NUESTRO TEMA A ANGULAR
+@include angular-material-theme($my-theme);
+// REEMPLAZA EN ANGULAR.JSON -> STYLES
+// "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+// POR LA RUTA DEL CUSTOM THEME
+// "src/assets/styles/my-theme.scss",
+
+/*@include mat.all-component-themes($my-theme);*/
+
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -27,7 +26,7 @@ $REDEGA-theme: mat.define-light-theme(( color: ( primary: $REDEGA-primary, accen
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    //    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 body {

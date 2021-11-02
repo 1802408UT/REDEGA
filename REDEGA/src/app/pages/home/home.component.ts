@@ -11,10 +11,12 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   dataemail = 'adminredega@gmail.com';
   datapassword = '123456789';
+  
   constructor(public auth: AngularFireAuth,
     private router:Router) { }
 
   ngOnInit(): void {
+  
   }
   logout() {
     this.auth.signOut();
@@ -25,7 +27,6 @@ export class HomeComponent implements OnInit {
     this.auth.signInWithEmailAndPassword(this.dataemail, this.datapassword)
   .then((userCredential) => {
     // Signed in
-    const user = userCredential.user;
     //this.router.navigate(['Inicio']);
     // ...
   })

@@ -43,7 +43,15 @@ export class LoginComponent{
     // Signed in
     const user = userCredential.user;
     console.log('Exito');
-    this.router.navigate(['Inicio']);
+    this.router.navigate(['home']);
+    /*
+    console.log(user);
+    console.log(user?.metadata.lastSignInTime);
+    console.log(user?.uid);
+    console.log(user?.email);
+    console.log(user?.metadata.creationTime);
+    console.log(user?.providerData);
+*/
     // ...
   })
   .catch((error) => {
@@ -51,4 +59,9 @@ export class LoginComponent{
     const errorMessage = error.message;
   });
   }
+  /*
+  change(){
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+ }*/
+
 }
